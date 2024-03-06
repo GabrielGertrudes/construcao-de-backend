@@ -94,4 +94,4 @@ console.log(pessoa.nome)
 console.log(pessoa.endereco)
 
 pessoa.nome = "Gabriel Gertrudes"
-console.log(pessoa.nome)
+console.log(pessoa.nome.toUpperCase())
