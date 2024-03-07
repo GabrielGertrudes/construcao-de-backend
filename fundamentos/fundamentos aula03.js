@@ -95,3 +95,112 @@ console.log(pessoa.endereco)
 
 pessoa.nome = "Gabriel Gertrudes"
 console.log(pessoa.nome.toUpperCase())
+
+    /*
+        Operadores aritmeticos:
+        + - * / % **
+        precedência
+        ()
+        **
+        * / %
+        + -
+        Math
+        
+        Operadores relacionais
+        > < >= <=
+        == != igual e diferente
+
+        compara valor e tipo
+        === !== igualdade restrita e diferenca restrita
+
+        Operadores lógicos
+        ! negação
+        && E
+        || OU
+
+        IF ELSE
+
+        if(condicao) {
+                acao
+        }
+    */
+let idade = 16
+
+if(idade>= 18) {
+    console.log("Maior de idade")
+} else {
+    console.log("Menos de idade")
+}
+
+let curso = "ads"
+idade = 20
+
+if (curso == "ads" && idade >= 18){
+    console.log("confirmado")
+} else {
+    console.log("negado")
+}
+
+if(curso == "ads") {
+    console.log("o curso não é ads")
+} if (idade >= 18) {
+    console.log("maior de idade")
+} else {
+    console.log("nenhuma condição atendida")
+}
+
+/* 
+Repetição 
+
+for (inicializacao; condicao; incremento) {
+    acao
+} 
+*/
+
+for (let i = 1; i == 10; i ++) {
+    console.log("contador? " , i)
+    if (i == 5) {
+        i = 11
+    }
+        console.log("loop")
+}
+
+//funcao
+
+function executa() {
+    console.log("Chamando funcao executa")
+}
+
+// funcao com parametro e sem retorno
+function executa(nome) {
+    console.log("Chamado funcao executa com parametro")
+    console.log(nome)
+}
+
+// executa()
+executa("Gabriel")
+
+// funcao com retorno
+
+function soma(numA, numB) {
+    return numA + numB
+}
+
+let resultado = soma(2, 4)
+console.log(resultado)
+
+// console.log("CHAMANDO MULTIPLICAR ANTES", multiplicar( 2, 2))
+
+const multiplicar = function (numA, numB) {
+    return numA * numB
+}
+console.log("CHAMANDO MULTIPLICAR ANTES", multiplicar( 2, 2))
+
+const teste = () => console.log("TESTE")
+
+teste()
+
+const somaArrow = (numA, numB) => numA + numB
+console.log("CHAMANDO somaArrow", somaArrow(2,5))
+
+
