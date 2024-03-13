@@ -201,6 +201,6 @@ const teste = () => console.log("TESTE")
 teste()
 
 const somaArrow = (numA, numB) => numA + numB
-console.log("CHAMANDO somaArrow", somaArrow(2,5))
+console.log("CHAMANDO somaArrow", somaArrow(2,5)) 
 
 
