@@ -17,6 +17,12 @@ app.post("/teste", (req, res) => {
     res.send("TESTE POST OK!")
 })
 
+// CRIE UMA CHAMADA PARA O RECURSO /ALUNO
+// DEVOLVA NA RESPOSTA O SEU NOME JUNTO COM A SUA MATRICULA
+app.get('/aluno', (req, res) => {
+    res.send("Aluno: Pedro João - Matricula: 202422")
+})
+
 // startando servidor(backend - api) para escutar comunicações
 // na porta 3000
 app.listen(3000, () => {
