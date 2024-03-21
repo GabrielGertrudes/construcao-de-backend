@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex4</title>
+</head>
+<body>
+    
+<!--Peça ao usuário para digitar idades de 10 pessoas. Exiba quantas pessoas são maior de idade (18 anos) e
+quantas são menores.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Verificador de Idade</title>
+<style>
+    *{
+        text-align: center;
+    }
+</style>
+
+</head>
+<body>
+
+<h2>Digite as idades das 10 pessoas:</h2>
+
+<form id="ageForm">
+  <input type="number" name="age1" placeholder="Idade 1" min="0" required><br>
+  <input type="number" name="age2" placeholder="Idade 2" min="0" required><br>
+  <input type="number" name="age3" placeholder="Idade 3" min="0" required><br>
+  <input type="number" name="age4" placeholder="Idade 4" min="0" required><br>
+  <input type="number" name="age5" placeholder="Idade 5" min="0" required><br>
+  <input type="number" name="age6" placeholder="Idade 6" min="0" required><br>
+  <input type="number" name="age7" placeholder="Idade 7" min="0" required><br>
+  <input type="number" name="age8" placeholder="Idade 8" min="0" required><br>
+  <input type="number" name="age9" placeholder="Idade 9" min="0" required><br>
+  <input type="number" name="age10" placeholder="Idade 10" min="0" required><br>
+  <button type="submit">Verificar</button>
+</form>
+
+<div id="result"></div>
+
+<script>
+document.getElementById("ageForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+  
+  var form = event.target;
+  var ages = [];
+  for (var i = 0; i < form.elements.length; i++) {
+    if (form.elements[i].type === "number") {
+      ages.push(parseInt(form.elements[i].value));
+    }
+  }
+  
+  var countOfLegalAge = 0;
+  var countOfMinor = 0;
+  
+  for (var j = 0; j < ages.length; j++) {
+    if (ages[j] >= 18) {
+      countOfLegalAge++;
+    } else {
+      countOfMinor++;
+    }
+  }
+  
+  var resultElement = document.getElementById("result");
+  resultElement.innerHTML = "Maiores de idade: " + countOfLegalAge + "<br>Menores de idade: " + countOfMinor;
+});
+</script>
+
+</body>
+</html>
+
+
+
+
+</body>
+</html>
